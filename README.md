@@ -7,3 +7,7 @@ the data should input in con or import from file must obey the format
    E O F
 ```
 
+this is my first open source program
+with my learning progress
+would I upload more source
+
