@@ -1,5 +1,11 @@
 # AMFile_rename
 
+after compiling the source to an exe , copy the exe file into the files located floder , which need to rename .
+
+for now if you want to use a data file which store the addressse and names , you'd better rename the file to "download.txt" and put it into the same location
+
+
+
 the data should input in con or import from file must obey the format
 ```file.ext file.name.mp3
    file1.ext file.name1.mp4
