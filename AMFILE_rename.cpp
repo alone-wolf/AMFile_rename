@@ -7,6 +7,8 @@
 
 #define DATA_FILE_NAME "download.txt"
 
+//version 1.1
+
 using namespace std;
 
 //import two char set and the function will rename it auto*ly
@@ -60,7 +62,7 @@ int main(){
     cout<<"1.from file"<<endl;
     cout<<"2.input data"<<endl;
     cout<<"any other char to stop"<<endl;
-    cout<<"notice: format must be == num source_address new_name.* =="<<endl;
+    cout<<"notice: format must be \" num source_address new_name.* \" "<<endl;
     cout<<"and num E means to stop the addition line must be E O F"<<endl;
     cout<<"================================================================"<<endl;
     char a;
