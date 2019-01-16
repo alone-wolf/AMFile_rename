@@ -5,9 +5,9 @@
 #include<conio.h>
 #include<string>
 
-#define DATA_FILE_NAME "download.txt"
+//#define DATA_FILE_NAME "download.txt"
 
-//version 1.1
+//version 1.2
 
 using namespace std;
 
@@ -35,6 +35,7 @@ void file_rename(string source_address,string new_name){
 }
 
 void fromcon(){
+    cout<<"please input the correct format data"<<endl;
     string num,source_address,new_name;
     cin>>num>>source_address>>new_name;
     while(num!="E"){
@@ -44,9 +45,10 @@ void fromcon(){
 }
 
 //read data from the file and
-void fromfile(){
+void fromfile(char data_filename[]="download.txt"){
+    cout<<"data will import from file"<<endl;
     string num="1",source_address,new_name;
-    ifstream infile("DATA_FILE_NAME",ios::in);
+    ifstream infile(data_filename,ios::in);
     infile>>num>>source_address>>new_name;
     while(num!="E"){
         infile>>num>>source_address>>new_name;
@@ -68,12 +70,22 @@ int main(){
     char a;
     switch(a=getch()-'0'){
         case 1:{
-            cout<<"data will import from file"<<endl;
-            fromfile();
+            cout<<"input 1 to define your own file name"<<endl;
+            char a=getch()-'0';
+            if(a==1){
+                cout<<"input you own file name"<<endl;
+                string data_file_name;
+                cin>>data_file_name;
+                char name[256];
+                file_rename(data_file_name,name);
+                fromfile(name);
+            }
+            else{
+                fromfile();
+            }
             break;
         }
         case 2:{
-            cout<<"please input the correct format data"<<endl;
             fromcon();
             break;
         }
